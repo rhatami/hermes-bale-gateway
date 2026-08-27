@@ -77,7 +77,3 @@ that changes from "processing..." to the final answer.
 - Gateway restart from inside Hermes is blocked — use separate terminal or `systemctl --user restart hermes-gateway`
 - Bale's markdown is NOT GitHub-flavored — prompt hint tells LLM to use plain text
 - User IDs are numeric (like Telegram), not usernames
-
-## For GitHub Publication
-See `~/.hermes/plugins/bale/` for the complete plugin ready to publish.
-License: MIT. Author: NousResearch.
