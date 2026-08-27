@@ -1,0 +1,39 @@
+name: bale-platform
+label: Bale
+kind: platform
+version: 1.0.0
+description: >
+  Bale Messenger gateway adapter for Hermes Agent.
+  Connects to Bale (بله) — an Iranian messaging platform with a
+  Telegram-compatible Bot API. Supports text, media, inline keyboards,
+  and per-user allowlists. Zero external dependencies beyond requests.
+author: NousResearch
+homepage: https://github.com/NousResearch/hermes-agent
+license: MIT
+requires_env:
+  - name: BALE_BOT_TOKEN
+    description: "Bale bot token (format: 123456:abcdef...)"
+    prompt: "Bale bot token from @BotFather"
+    url: "https://ble.ir/BotFather"
+    password: true
+optional_env:
+  - name: BALE_ALLOWED_USERS
+    description: "Comma-separated Bale user IDs allowed to talk to the bot"
+    prompt: "Allowed user IDs (comma-separated)"
+    password: false
+  - name: BALE_ALLOW_ALL_USERS
+    description: "Allow any Bale user to trigger the bot (dev only)"
+    prompt: "Allow all users? (true/false)"
+    password: false
+  - name: BALE_HOME_CHANNEL
+    description: "Default chat ID for cron/notification delivery"
+    prompt: "Home channel ID"
+    password: false
+  - name: BALE_HOME_CHANNEL_NAME
+    description: "Display name for the Bale home channel"
+    prompt: "Home channel display name"
+    password: false
+  - name: BALE_POLL_INTERVAL
+    description: "Polling interval in seconds (default: 2)"
+    prompt: "Poll interval"
+    password: false
